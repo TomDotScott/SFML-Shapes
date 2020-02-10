@@ -10,6 +10,8 @@
 
 // SFML header file for graphics, there are also ones for Audio, Window, System and Network
 #include <SFML/Graphics.hpp>
+#include "circle.h"
+#include "Rectangle.h"
 
 int main()
 {
@@ -19,11 +21,8 @@ int main()
     // and initialise its size and title text
     sf::RenderWindow window(sf::VideoMode(800, 600), "C++ Snake ICA : U0018197");
 
-    // Create an instance of the SFML CircleShape and initialise it so radius is 100
-    sf::CircleShape shape(100.f);
-
-    // Set the shape's fill colour attribute to Green
-    shape.setFillColor(sf::Color::Green);
+	Circle circle = Circle(sf::Color(255, 0, 124), sf::Vector2f(400, 300), 50);
+	Rectangle rectangle = Rectangle(sf::Color(255, 0, 0), sf::Vector2f(100, 150), 200, 50);
 
     // We can still output to the console window
     std::cout << "SnakeGame: Starting" << std::endl;
@@ -46,11 +45,12 @@ int main()
           }
         }
 
+
         // We must clear the window each time around the loop
         window.clear();
 
-        // draw our circle shape to the window
-        window.draw(shape);
+		circle.Render(window);
+		rectangle.Render(window);
 
         // Get the window to display its contents
         window.display();
