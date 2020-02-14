@@ -2,7 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include "Shape.h"
 
-class Rectangle : Shape
+class Rectangle : public Shape
 {
 private:
 	float height = 1;

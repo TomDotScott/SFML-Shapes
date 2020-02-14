@@ -10,5 +10,6 @@ public:
 	//this means that the function can only be called by its children
 	//so therefore a Shape cannot exist on its own
 	virtual void Render(sf::RenderWindow& window) = 0;
+
 };
 

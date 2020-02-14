@@ -2,7 +2,7 @@
 #include "SFML/Graphics.hpp"
 #include "Shape.h"
 
-class Circle : Shape
+class Circle : public Shape
 {
 private:
 	float radius = 1;
