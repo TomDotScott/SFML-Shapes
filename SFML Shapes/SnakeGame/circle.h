@@ -9,7 +9,6 @@ private:
 	sf::CircleShape circle;
 public:
 	void Render(sf::RenderWindow& window);
-	Circle();
 	Circle(sf::Color colourToBe, sf::Vector2f vector, float radius);
 };
 

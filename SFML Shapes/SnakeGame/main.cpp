@@ -21,8 +21,8 @@ int main()
     // and initialise its size and title text
     sf::RenderWindow window(sf::VideoMode(800, 600), "C++ Snake ICA : U0018197");
 
-	Circle circle = Circle(sf::Color(255, 0, 124), sf::Vector2f(400, 300), 50);
-	Rectangle rectangle = Rectangle(sf::Color(255, 0, 0), sf::Vector2f(100, 150), 200, 50);
+	Circle* circle = new Circle(sf::Color(255, 0, 124), sf::Vector2f(400, 300), 50);
+	Rectangle* rectangle = new Rectangle(sf::Color(255, 0, 0), sf::Vector2f(100, 150), 200, 50);
 
     // We can still output to the console window
     std::cout << "SnakeGame: Starting" << std::endl;
@@ -49,8 +49,8 @@ int main()
         // We must clear the window each time around the loop
         window.clear();
 
-		circle.Render(window);
-		rectangle.Render(window);
+		circle->Render(window);
+		rectangle->Render(window);
 
         // Get the window to display its contents
         window.display();
