@@ -1,13 +1,12 @@
 #pragma once
 #include "SFML/Graphics.hpp"
+#include "Shape.h"
 
-class Rectangle
+class Rectangle : Shape
 {
 private:
-	sf::Vector2f position;
-	sf::Color colour;
-	float height;
-	float width;
+	float height = 1;
+	float width = 2;
 	sf::RectangleShape rectangle;
 public:
 	void Render(sf::RenderWindow& window);

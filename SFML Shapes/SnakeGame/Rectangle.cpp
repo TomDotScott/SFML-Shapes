@@ -5,10 +5,6 @@ void Rectangle::Render(sf::RenderWindow& window) {
 	window.draw(rectangle);
 }
 
-Rectangle::Rectangle() {
-
-}
-
 Rectangle::Rectangle(sf::Color colourToBe, const sf::Vector2f vector, float heightToBe, float widthToBe) {
 	colour = colourToBe;
 	position = vector;

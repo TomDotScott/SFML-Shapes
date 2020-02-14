@@ -1,12 +1,11 @@
 #pragma once
 #include "SFML/Graphics.hpp"
+#include "Shape.h"
 
-class Circle
+class Circle : Shape
 {
 private:
-	sf::Vector2f position;
-	sf::Color colour;
-	float radius;
+	float radius = 1;
 	sf::CircleShape circle;
 public:
 	void Render(sf::RenderWindow& window);
