@@ -10,5 +10,6 @@ private:
 	sf::RectangleShape rectangle;
 public:
 	void Render(sf::RenderWindow& window);
-	Rectangle(sf::Color colourToBe, sf::Vector2f vector, float heightToBe, float widthToBe);
+	Rectangle(sf::Color colourToBe, sf::Vector2f vector, float heightToBe, float widthToBe, sf::Vector2f speedToBe);
+	void Move(sf::RenderWindow& window);
 };

@@ -28,17 +28,15 @@ int main()
 	std::vector<Shape*> shapes;
 
 	//add 100 shapes to the shapes vector
-	for (size_t i = 0; i < 1000; i++)
+	for (size_t i = 0; i < 100; i++)
 	{
 		if (rand() % 2 == 0) {
-			Circle* circle = new Circle(sf::Color(rand() % 255, rand() % 255, rand() % 255), sf::Vector2f(rand() % 800, rand() % 600), rand() % 10);
+			Circle* circle = new Circle(sf::Color(rand() % 255, rand() % 255, rand() % 255), sf::Vector2f(rand() % 800, rand() % 600), rand() % 10, sf::Vector2f(rand() % 3, rand() % 3));
 			shapes.push_back(circle);
-			std::cout << "CIRCLE: " << sizeof(circle) << std::endl;
 		}
 		else {
-			Rectangle* rectangle = new Rectangle(sf::Color(rand() % 255, rand() % 255, rand() % 255), sf::Vector2f(rand() % 800, rand() % 600), rand() % 200, rand() % 50);
+			Rectangle* rectangle = new Rectangle(sf::Color(rand() % 255, rand() % 255, rand() % 255), sf::Vector2f(rand() % 800, rand() % 600), rand() % 200, rand() % 50, sf::Vector2f(rand() % 3, rand() % 3));
 			shapes.push_back(rectangle);
-			std::cout << "RECTANGLE: " << sizeof(rectangle) << std::endl;
 		}
 	}
 
@@ -68,6 +66,7 @@ int main()
         window.clear();
 
 		for (Shape* shape : shapes) {
+			shape->Move(window);
 			shape->Render(window);
 		}
 
